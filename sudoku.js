@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tempImg.src = "./images/" + count.toString() + ".png";
 
         tempImg.addEventListener('load', function () {
-            //imageList.push(this);
-            imageList[count-1] = this;
+            imageList.push(this);
             imageCounter++;
             console.log(imageCounter);
             if(imageCounter === numImages)
@@ -45,8 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startGame(canvas, ctx, imageList)
 {
-    console.log(imageList);
-
     //topState
     let waiting = 1;
     let cellClicked = 2;
